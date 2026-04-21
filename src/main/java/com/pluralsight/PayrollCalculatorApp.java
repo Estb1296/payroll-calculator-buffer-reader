@@ -1,10 +1,7 @@
 package com.pluralsight;
 
-import java.io.BufferedReader;
+import java.io.*;
 //import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.Scanner;
 
 public class PayrollCalculatorApp {
@@ -41,7 +38,7 @@ public class PayrollCalculatorApp {
         bufferReader.close();
         String docWrite = "input.nextLine()";
         writeIntoanotherFile(employees,input);
-        FileWriter writer=new FileWriter(docWrite);
+        BufferedWriter writer = new BufferedWriter(new FileWriter(docWrite));
         //input.nextLine();
         writer.close();
 
